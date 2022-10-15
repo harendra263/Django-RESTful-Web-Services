@@ -15,8 +15,7 @@ class DroneCategoryTests(APITestCase):
     def post_drone_category(self, name):
         url = reverse(views.DroneCategoryList.name)
         data = {'name': name}
-        response = self.client.post(url, data, format='json')
-        return response
+        return self.client.post(url, data, format='json')
 
     def test_post_and_get_drone_category(self):
         """

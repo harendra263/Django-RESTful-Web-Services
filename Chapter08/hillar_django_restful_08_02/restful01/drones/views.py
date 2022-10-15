@@ -138,7 +138,7 @@ class CompetitionFilter(filters.FilterSet):
         name='drone__name')
     pilot_name = AllValuesFilter(
         name='pilot__name')
-    
+
     class Meta:
         model = Competition
         fields = (
